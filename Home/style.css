@@ -1,0 +1,138 @@
+html, body, canvas {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3e005b, #6e0342);
+  }
+
+  
+  p {
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 40px;
+    margin-bottom: 400px;
+    margin-left: 100px;
+    display: block;
+    background: -webkit-linear-gradient(top, #f90971, #FFFFFF);
+    background: -moz-linear-gradient(top, #f90971, #FFFFFF);
+    background: linear-gradient(to bottom, #f90971, #FFFFFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  h3 {
+    font-size: 18px;
+    color: azure;
+    margin-bottom: 300px;
+    margin-left: -200px;
+    
+    
+  }
+  
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+  }
+  
+ 
+  .asset-img {
+    display: none;
+  }
+  
+  /* CSS for the girl image */
+.girl-img {
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    width: 500px; 
+    height: auto; 
+    border-radius: 0%; 
+    margin: 20px;
+    z-index: 10; 
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Add a hover effect for the girl image */
+.girl-img:hover {
+    transform: scale(1.1); 
+    filter: brightness(1.2); 
+}
+
+/* Style for the taskbar container */
+.taskbar {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  padding: 1px; 
+  width: 90px; 
+  height: 100vh; 
+  position: fixed; 
+  top: 90px; 
+  right: 100px; 
+}
+
+/* Style for the nav-buttons */
+.nav-button {
+  display: flex; 
+  align-items: center; 
+  color: white; 
+  text-decoration: none; 
+  margin-bottom: 20px; 
+  padding: 10px 15px; 
+  font-size: 16px; 
+  width: 100%; 
+  /* background: linear-gradient(45deg, #422205 10%, #602002 10%, #8b3b15 10%, #8B5A2B 10%, #eb9d54 15%, #4b1b04 15%, #502917 10%); */
+  /*background-size: 50px 50px; */
+  border-radius: 5px; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+  text-align: left; 
+  /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);   */
+}
+
+/* Style for the icons inside nav-buttons */
+.nav-button i {
+  font-size: 18px; 
+  margin-right: 10px; 
+}
+
+/* Hover effect for nav-buttons */
+.nav-button:hover {
+  background-color: #fb95e6a8; 
+  transform: translateY(-2px); 
+  width: auto;
+}
+
+/* For responsive layout if needed */
+@media (max-width: 768px) {
+  .taskbar {
+      width: 100%; 
+      height: auto; 
+      position: relative; 
+  }
+  .nav-button {
+      text-align: center; 
+  }
+}

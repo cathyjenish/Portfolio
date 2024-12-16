@@ -1,0 +1,212 @@
+.taskbar {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  text-decoration: none;
+  padding: 1px; 
+  width: 90px;
+  height: 100vh; 
+  position: fixed; 
+  top: 90px; 
+  right: 100px; 
+}
+
+
+.nav-button {
+  display: flex; 
+  align-items: center; 
+  color: white; 
+  text-decoration: none; 
+  margin-bottom: 20px;
+  padding: 10px 15px; 
+  font-size: 16px; 
+  width: 100%; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+  text-align: left; /
+}
+
+
+.nav-button i {
+  font-size: 18px; 
+  margin-right: 10px;
+  text-decoration: none; 
+}
+
+
+.nav-button:hover {
+  background-color: #fb95e6a8; 
+  text-decoration: none;
+  transform: translateY(-2px);
+  width: auto;
+}
+
+/* For responsive layout if needed */
+@media (max-width: 768px) {
+  .taskbar {
+      width: 100%; 
+      height: auto; 
+      position: relative; 
+  }
+  .nav-button {
+      text-align: center; 
+  }
+}
+/* ##################### */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(135deg, #3e005b, #6e0342);
+  overflow: hidden;
+}
+
+#containe_r {
+  text-align: center;
+  /* margin-right: 100px; */
+}
+
+#experience {
+  margin-bottom: 20px;
+}
+
+canvas {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #ccc;
+  transition: transform 0.5s ease;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+
+
+#drone-box {
+  position: absolute;
+  left: 10%; 
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: float 3s ease-in-out infinite;
+}
+
+.drone-img {
+  width: 250px;
+}
+
+.drone-left, .drone-right {
+  position: absolute;
+  top: -30%;
+  width: 150px;
+  opacity: 0.8;
+}
+
+.drone-left {
+  left: -60px;
+  animation: sideWobble 2s ease-in-out infinite;
+}
+
+.drone-right {
+  right: -60px;
+  animation: sideWobble 2s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(-50%) translateY(-10px);
+  }
+  50% {
+      transform: translateY(-50%) translateY(10px);
+  }
+}
+
+@keyframes sideWobble {
+  0%, 100% {
+      transform: rotate(0deg);
+  }
+  50% {
+      transform: rotate(5deg);
+  }
+}
+
+
+/* Card Container */
+
+.containe_r {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.car_d {
+  background-color: #1E1E1E;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.car_d h2 {
+  color: #8A2BE2;
+  margin: 0 0 10px;
+}
+
+.year {
+  display: block;
+  font-size: 0.9em;
+  color: #A9A9A9;
+}
+
+.location p {
+  margin: 10px 0;
+  font-size: 0.9em;
+}
+
+.description {
+  margin: 15px 0;
+  font-size: 1em;
+  color: #D3D3D3;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.technologies span {
+  background-color: #8A2BE2;
+  color: #ccc;
+  border-radius: 15px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 0.9em;
+}

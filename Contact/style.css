@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+html, body, canvas {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3e005b, #6e0342);
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 400px;
+    margin-left: 100px;
+    background: linear-gradient(to bottom, #f90971, #FFFFFF);
+    /* -webkit-background-clip: text; */
+    color: transparent;
+    text-align: center;
+}
+
+h3 {
+    font-size: 18px;
+    color: azure;
+    margin-bottom: 300px;
+    margin-left: -200px;
+}
+
+/* Profile Image */
+.girl-img {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 500px;
+    height: auto;
+    border-radius: 0;
+    margin: 20px;
+    z-index: 10;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.girl-img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Taskbar Styling */
+.taskbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    width: 90px;
+    height: 100vh;
+    position: fixed;
+    top: 40px;
+    right: 100px;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: left;
+}
+
+
+.nav-button i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.nav-button:hover {
+    background-color: #fb95e6a8;
+    transform: translateY(-2px);
+    text-decoration: none;
+    width: auto;
+}
+
+/* Responsive Taskbar */
+@media (max-width: 768px) {
+    .taskbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .nav-button {
+        text-align: center;
+    }
+}
+
+
+#contact h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: rgb(229, 182, 219); 
+    position: absolute ; 
+    top: 1500px;
+    left: 50%;  
+    transform: translateX(-50%); 
+    margin: 0; 
+}
+
+#contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+#contact form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin-top: 10%;
+    /* background-color:#38b5f45a; */
+    margin-left: 100px;
+    border-radius: 10px; 
+    outline: 2px solid #38a3a5; 
+    box-shadow: 0 0 10px rgba(56, 163, 165, 0.5); 
+    padding: 20px;
+}
+#contact form:hover {
+    outline-color: #2d8082; 
+    box-shadow: 0 0 15px rgba(45, 128, 130, 0.7); 
+}
+
+#contact label {
+    font-weight: bold;
+}
+
+#contact input,
+#contact textarea {
+    
+    width: 80%;
+    padding: 8px;
+    margin-left: 8%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#contact button {
+    width: 30%;
+    margin-left: 40%;
+    margin-bottom: 2%;
+    padding: 10px;
+    background-color: #b874b8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#contact button:hover {
+    background-color: #c756c7;
+}
+
+
+#contact p {
+    margin-top: 600px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+form .input-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.input-box .input-field {
+    flex: 1;
+}
+
+.field .item {
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    border: 2px solid #0ef;
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #ededed;
+    margin: 12px 0;
+}
+
+.field.error .item {
+    border-color: #d93025;
+}
+
+.field .item::placeholder {
+    color: rgba(255, 255, 255, .3);
+}
+
+.field .error-txt {
+    font-size: 14.5px;
+    color: #d93025;
+    text-align: left;
+    margin: -5px 0 10px;
+    display: none;
+}
+
+.field.error .error-txt {
+    display: block;
+}
+
+form .textarea-field .item {
+    resize: none;
+}
+
+form .textarea-field .error-txt {
+    margin-top: -10px;
+}
+
+form button {
+    padding: 12px 32px;
+    background: #0ef;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 16px;
+    color: #333;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    box-shadow: none;
+    transform: translateY(-2px);
+}
+.h3{
+  font: 1em sans-serif;
+}
+.contact-info {
+  margin-top: 20px;
+  text-align: right; 
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center; 
+  right: 280px;
+  bottom: 50px; 
+  font-size: 16px; 
+  color: #ededed; 
+}
+
+.contact-info a {
+  color: #ededed;
+  text-decoration: none;
+  margin-left: 5px; 
+}
+
+.contact-info a:hover {
+  color: #0ef; 
+}
+
+.contact-info i {
+  color: #0ef; 
+  font-size: 18px; 
+}
+
+
+.social-media {
+  position: absolute; 
+  right: 280px;
+  bottom: 50px; 
+  width: 300px;
+  text-align: right;
+  color: #ededed;
+}
