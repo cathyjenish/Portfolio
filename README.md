@@ -24,7 +24,7 @@ Open index.html in a browser.
 
 ## Live Demo:
 
-Link to the deployed site (if available).
+Link to the deployed site (https://cathyjenish.github.io/Portfolio/).
 
 ## Contributing:
 
